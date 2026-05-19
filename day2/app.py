@@ -1,5 +1,5 @@
 import streamlit as st
-#from db_c import conn,cursor
+from dbb_c import conn,cursor
 login,signup=st.tabs(
     ["Login","Signup"]
 )
