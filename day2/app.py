@@ -38,7 +38,7 @@ def dashboard():
             st.success("logout sucessfully")
             st.rerun()
 
-def login():
+def login_fun():
     st.header("Login")
     with st.form("Login_Form"):
         email=st.text_input("Email")
@@ -53,7 +53,7 @@ def login():
             st.write("loggedin succesfully")
             st.rerun()
 
-def signup():
+def signup_fun():
     st.header("Signup")
     with st.form("SignUp_Form"):
         name=st.text_input("Name")
@@ -75,12 +75,8 @@ if st.session_state.user==None:
         ["Login","Signup"]
     )
     with signup:
-        signup()
+        signup_fun()
     with login:
-        login()
+        login_fun()
 else:
     dashboard()
-
-
-
-                
