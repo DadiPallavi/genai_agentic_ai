@@ -45,7 +45,7 @@ def login_fun():
         password=st.text_input("Password",type="password")
         btn=st.form_submit_button("Login")
         if btn :
-            query="select * from users3 where email=%s and password = %s"
+            query="select * from users where email=%s and password = %s"
             values=(email,password)
             cursor.execute(query,values)
             loggedin_user=cursor.fetchone()
